@@ -99,8 +99,8 @@ CALIB_SIZE = 512  # 从训练集中随机选取 512 张
 创建一个包含有代表性样本的文件夹：
 ```
 calib_data/
-  ├── pos/  # 500 张有图像的样本
-  └── nag/  # 500 张无图像的样本
+  ├── pos/ 
+  └── nag/ 
 ```
 
 然后设置：
@@ -128,15 +128,6 @@ USE_RANDOM_CALIB = True  # ⚠️ 实际使用时必须改为 False
 
 ## 🛠️ 常见问题
 
-### Q: 量化报错 "FileNotFoundError: ONNX 模型不存在"
-**A:** 确保已经先运行训练脚本并导出了 ONNX 模型：
-```bash
-python train_mobilenetv2.py
-```
-
-### Q: 量化报错 "校准数据集目录不存在"
-**A:** 检查 `CALIB_DIR` 路径是否正确，确保目录存在且包含数据
-
 ### Q: 量化后精度损失太大（>5%）
 **A:** 尝试以下方法：
 1. 增加 `CALIB_SIZE` 到 1000
@@ -148,12 +139,6 @@ python train_mobilenetv2.py
 - 默认量化: 3-5 分钟
 - 层级均衡: 5-10 分钟
 - 混合精度: 5-15 分钟
-
-### Q: .espdl 文件如何部署到 ESP32？
-**A:**
-1. 使用 ESP-DL 库（需要在 ESP32 项目中集成）
-2. 将 .espdl 文件复制到 ESP32 的文件系统
-3. 使用 ESP-DL API 加载模型并进行推理
 
 ## 📝 完整示例
 
