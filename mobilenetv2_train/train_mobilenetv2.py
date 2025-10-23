@@ -1,8 +1,6 @@
 """
 MobileNetV2 2分类模型训练脚本
 用于 ESP32-S3 部署的轻量化模型
-
-
 """
 
 import torch
@@ -16,11 +14,9 @@ import numpy as np
 from tqdm import tqdm
 
 # ==================== 配置参数 ====================
-
-
 class Config:
     # 数据集路径
-    data_root = './data'  # 数据集根目录
+    data_root = './data'  # 数据集根目录（没有请添加）
 
     # 训练参数
     img_size = 320  # 图像大小（ESP32-S3 推荐小尺寸）
@@ -65,14 +61,14 @@ def create_dataloaders():
     train_transform, val_transform = prepare_data_transforms()
 
     # 使用 ImageFolder 加载数据
-    # 期望的目录结构：
+    # data目录结构：
     # data/
     #   ├── train/
-    #   │   ├── nag/    # 无图像 (标签 0，按字母顺序)
-    #   │   └── pos/    # 有图像 (标签 1，按字母顺序)
+    #   │   ├── nag/    # 无 (标签 0，按字母顺序)
+    #   │   └── pos/    # 有 (标签 1，按字母顺序)
     #   └── val/
-    #       ├── nag/    # 无图像 (标签 0)
-    #       └── pos/    # 有图像 (标签 1)
+    #       ├── nag/    # 无 (标签 0)
+    #       └── pos/    # 有 (标签 1)
     #
     # 注意：ImageFolder 会按照文件夹名称的字母顺序自动分配标签
     #       nag < pos (字母顺序)，所以 nag=0, pos=1
