@@ -1,7 +1,12 @@
 # Build directories
 build/
 dist/
+
+# ESP-IDF generated files
+sdkconfig
 sdkconfig.old
+dependencies.lock
+managed_components/
 
 # Python
 __pycache__/
@@ -19,16 +24,15 @@ ENV/
 env/
 .venv
 
-# IDEs
+# IDEs and editors
 .vscode/
 .idea/
+.claude/
 *.swp
 *.swo
 *~
 .DS_Store
-
-# ESP-IDF
-dependencies.lock
+.clangd
 
 # Model training outputs
 mobilenetv2_train/output/runs/
