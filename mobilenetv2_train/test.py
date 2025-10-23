@@ -22,7 +22,7 @@ class TestConfig:
     onnx_model = './output/image_classifier_320x320.onnx'
 
     # 测试图片路径（单张测试）
-    test_image = './testimages/image_20251023_163810_093.jpg'  # 修改为你的测试图片路径
+    test_image = './testimages/image_20251023_163810_093.jpg'  
 
     # 测试图片文件夹路径（批量测试）
     test_image_dir = './testimages'  # 批量测试时使用
