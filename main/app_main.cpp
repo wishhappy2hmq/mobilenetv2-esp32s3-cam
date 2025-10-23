@@ -34,8 +34,8 @@ static const char *TAG = "mobilenetv2_cls";
 // ============================================================================
 
 // WiFi配置
-#define WIFI_SSID      "Niuniuniu"      // 修改为你的WiFi名称
-#define WIFI_PASSWORD  "niuniuniu666!"  // 修改为你的WiFi密码
+#define WIFI_SSID      "***"      // 修改为你的WiFi名称
+#define WIFI_PASSWORD  "***"  // 修改为你的WiFi密码
 
 // 推理配置
 #define INFERENCE_INTERVAL 10  // 每10帧推理一次
