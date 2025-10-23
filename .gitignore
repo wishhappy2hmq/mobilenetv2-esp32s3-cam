@@ -1,0 +1,47 @@
+# Build directories
+build/
+dist/
+sdkconfig.old
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+*.log
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ESP-IDF
+dependencies.lock
+
+# Model training outputs
+mobilenetv2_train/output/runs/
+mobilenetv2_train/output/models/*.pth
+mobilenetv2_train/output/models/*.onnx
+mobilenetv2_train/data/raw/
+mobilenetv2_train/data/processed/
+
+# Keep model files in imagenet_cls
+!imagenet_cls/models/**/*.espdl
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+.clangd
